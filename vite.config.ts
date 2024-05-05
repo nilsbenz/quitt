@@ -18,9 +18,9 @@ export default defineConfig({
         "maskable-icon-512x512.png",
       ],
       manifest: {
-        name: "zzzeit",
-        short_name: "zzzeit",
-        description: "Time tracking",
+        name: "pwa-starter-vite",
+        short_name: "pwa-starter-vite",
+        description: "pwa-starter-vite",
         display: "standalone",
         orientation: "portrait",
         start_url: ".",

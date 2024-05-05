@@ -79,16 +79,10 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "rotate-hourglass": {
-          "0%": { transform: "rotate(0deg)" },
-          "2%": { transform: "rotate(180deg)" },
-          "100%": { transform: "rotate(180deg)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        hourglass: "rotate-hourglass 30s ease 10s infinite",
       },
     },
   },

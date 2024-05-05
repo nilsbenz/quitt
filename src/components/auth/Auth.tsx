@@ -6,7 +6,7 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { HourglassIcon } from "lucide-react";
+import { BoxSelectIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -92,15 +92,12 @@ export default function Auth() {
   }, [action]);
 
   return (
-    <div className="max-sm:pt-32 fixed bottom-safe-bottom left-safe-left right-safe-right top-safe-top p-8">
+    <div className="fixed bottom-safe-bottom left-safe-left right-safe-right top-safe-top p-8 max-sm:pt-32">
       <div className="mx-auto flex h-full max-w-xs flex-col gap-8 sm:justify-center sm:gap-20">
         <div className="space-y-4">
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <HourglassIcon
-              className="size-6 animate-hourglass"
-              strokeWidth={3}
-            />
-            <p className="font-brand text-xl">zzzeit</p>
+            <BoxSelectIcon className="size-6" strokeWidth={3} />
+            <p className="font-brand text-xl">pwa-starter-vite</p>
           </div>
           <h2 className="h1 text-center leading-tight">
             {action === "login"

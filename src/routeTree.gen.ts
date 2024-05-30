@@ -16,21 +16,21 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
-const ProjectsLazyImport = createFileRoute('/projects')()
-const LogsLazyImport = createFileRoute('/logs')()
+const ProfileLazyImport = createFileRoute('/profile')()
+const ActivityLazyImport = createFileRoute('/activity')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
 
-const ProjectsLazyRoute = ProjectsLazyImport.update({
-  path: '/projects',
+const ProfileLazyRoute = ProfileLazyImport.update({
+  path: '/profile',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/projects.lazy').then((d) => d.Route))
+} as any).lazy(() => import('./routes/profile.lazy').then((d) => d.Route))
 
-const LogsLazyRoute = LogsLazyImport.update({
-  path: '/logs',
+const ActivityLazyRoute = ActivityLazyImport.update({
+  path: '/activity',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/logs.lazy').then((d) => d.Route))
+} as any).lazy(() => import('./routes/activity.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
@@ -45,12 +45,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
-    '/logs': {
-      preLoaderRoute: typeof LogsLazyImport
+    '/activity': {
+      preLoaderRoute: typeof ActivityLazyImport
       parentRoute: typeof rootRoute
     }
-    '/projects': {
-      preLoaderRoute: typeof ProjectsLazyImport
+    '/profile': {
+      preLoaderRoute: typeof ProfileLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -60,8 +60,8 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren([
   IndexLazyRoute,
-  LogsLazyRoute,
-  ProjectsLazyRoute,
+  ActivityLazyRoute,
+  ProfileLazyRoute,
 ])
 
 /* prettier-ignore-end */

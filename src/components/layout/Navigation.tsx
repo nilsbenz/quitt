@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import { Link } from "@tanstack/react-router";
 import { signOut } from "firebase/auth";
 import {
-  CalendarDaysIcon,
   ListIcon,
   LogOutIcon,
   LucideIcon,
-  TimerIcon,
+  UserIcon,
+  UsersIcon,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import ThemeToggle from "./ThemeToggle";
@@ -19,9 +19,9 @@ type NavElement = {
 };
 
 const navElements = [
-  { path: "/", text: "Tracker", icon: TimerIcon },
-  { path: "/logs", text: "Logs", icon: CalendarDaysIcon },
-  { path: "/projects", text: "Projects", icon: ListIcon },
+  { path: "/", text: "Groups", icon: UsersIcon },
+  { path: "/activity", text: "Activity", icon: ListIcon },
+  { path: "/profile", text: "Profile", icon: UserIcon },
 ];
 
 function NavigationElement({ element }: { element: NavElement }) {

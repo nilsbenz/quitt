@@ -18,9 +18,9 @@ export default defineConfig({
         "maskable-icon-512x512.png",
       ],
       manifest: {
-        name: "pwa-starter-vite",
-        short_name: "pwa-starter-vite",
-        description: "pwa-starter-vite",
+        name: "quitt",
+        short_name: "quitt",
+        description: "quitt",
         display: "standalone",
         orientation: "portrait",
         start_url: ".",

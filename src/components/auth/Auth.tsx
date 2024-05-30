@@ -6,7 +6,7 @@ import {
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { BoxSelectIcon } from "lucide-react";
+import { PiggyBankIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -96,8 +96,8 @@ export default function Auth() {
       <div className="mx-auto flex h-full max-w-xs flex-col gap-8 sm:justify-center sm:gap-20">
         <div className="space-y-4">
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <BoxSelectIcon className="size-6" strokeWidth={3} />
-            <p className="font-brand text-xl">pwa-starter-vite</p>
+            <PiggyBankIcon className="size-7" strokeWidth={2.5} />
+            <p className="font-brand text-xl">quitt</p>
           </div>
           <h2 className="h1 text-center leading-tight">
             {action === "login"

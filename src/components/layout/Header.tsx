@@ -1,7 +1,7 @@
 import { auth } from "@/lib/firebase";
 import { Link } from "@tanstack/react-router";
 import { signOut } from "firebase/auth";
-import { BoxSelectIcon, LogOutIcon } from "lucide-react";
+import { LogOutIcon, PiggyBankIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import ThemeToggle from "./ThemeToggle";
 
@@ -15,8 +15,8 @@ export default function Header() {
             className="ml-2 h-9 rounded-md px-2 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <div className="flex h-full items-center gap-1.5 lg:gap-3">
-              <BoxSelectIcon className="size-5" strokeWidth={3.25} />
-              <h1 className="font-brand text-xl">pwa-starter-vite</h1>
+              <PiggyBankIcon className="size-6" strokeWidth={2.5} />
+              <h1 className="font-brand text-xl">quitt</h1>
             </div>
           </Link>
           <div className="flex gap-2 pr-3 lg:hidden">
